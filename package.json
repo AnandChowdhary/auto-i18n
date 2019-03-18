@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.0",
+    "@types/fs-extra": "^5.0.5",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.3",
     "concurrently": "^4.1.0",
@@ -50,6 +51,7 @@
     ]
   },
   "dependencies": {
-    "@google-cloud/translate": "^2.1.4"
+    "@google-cloud/translate": "^2.1.4",
+    "fs-extra": "^7.0.1"
   }
 }
