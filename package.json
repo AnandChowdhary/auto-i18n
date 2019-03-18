@@ -14,7 +14,7 @@
     "build-test": "yarn build && yarn test-without-coverage",
     "start": "concurrently 'yarn prettier-watch' 'yarn watch'",
     "watch": "onchange '*.{ts,json}' -- yarn build-test",
-    "prettier-watch": "onchange '*.{ts,json}' -- prettier --write {{changed}}",
+    "prettier-watch": "onchange '**/*.{ts,json}' -- prettier --write {{changed}}",
     "test": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test-without-reporting": "jest --coverage",
     "test-without-coverage": "jest"
