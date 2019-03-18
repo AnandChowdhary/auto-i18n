@@ -1,5 +1,5 @@
 const translate = async (term: string, lang: string) => {
-    return "hello";
-}
+  return "bonjour";
+};
 
 export { translate };
