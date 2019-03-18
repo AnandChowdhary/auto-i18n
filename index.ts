@@ -66,14 +66,14 @@ const translateFile = async (
 ) => {
   if (!languages.includes(lang)) throw new Error(`invalid language: ${lang}`);
   let contents = await readJson(fileUrl);
-  let isSingleLanguageFile = true;
+  let isSingleFile = true;
   Object.keys(contents).forEach(key => {
-    if (!languages.includes(key)) isSingleLanguageFile = false;
+    if (!languages.includes(key)) isSingleFile = false;
   });
-  if (isSingleLanguageFile) {
+  if (isSingleFile) {
     contents[lang] = await translateObject(contents[from], lang, directory);
   } else {
-    contents = await translateObject(contents[from], lang, directory);
+    contents = await translateObject(contents, lang, directory);
   }
   if (write) await writeJson(fileUrl, contents);
   return contents;

@@ -130,3 +130,6 @@ typings/
 
 # Built files
 dist/
+
+# Test ache directories
+test-cache/
