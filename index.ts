@@ -26,19 +26,22 @@ const translate = async (
   term: string,
   lang: string,
   directory?: string,
+  forceUpdate: boolean = false,
   detailed: boolean = false
 ) => {
   const fraud = await init(directory);
   if (!languages.includes(lang)) throw new Error(`invalid language: ${lang}`);
   const cacheKey = `${lang}_${term}`;
-  const exists = await fraud.exists(cacheKey);
+  let exists = await fraud.exists(cacheKey);
+  if (forceUpdate) exists = false;
   const detailResult = (text: string, from: string) =>
     detailed ? { text, from } : text;
   if (exists) {
     return detailResult(<string>await fraud.read(cacheKey), "cache");
   } else {
     const translation = await googleTranslate.translate(term, lang);
-    if (!translation.length) throw new Error("update to translate from api");
+    if (!translation.length || !translation[0])
+      throw new Error("unable to translate from api");
     await fraud.create(cacheKey, translation[0]);
     return detailResult(translation[0], "api");
   }
@@ -60,11 +63,10 @@ const translateObject = async (
 const translateFile = async (
   fileUrl: string,
   lang: string,
-  from: string = "en",
   write: boolean = false,
+  from: string = "en",
   directory?: string
 ) => {
-  if (!languages.includes(lang)) throw new Error(`invalid language: ${lang}`);
   let contents = await readJson(fileUrl);
   let isSingleFile = true;
   Object.keys(contents).forEach(key => {
