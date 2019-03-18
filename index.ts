@@ -115,7 +115,6 @@ const translateFile = async (
 const generate = async (
   fileUrl: string,
   lang: string[],
-  from: string = "en",
   directory?: string
 ) => {
   for (let singleLang of lang) {
@@ -123,7 +122,7 @@ const generate = async (
       fileUrl,
       singleLang,
       false,
-      from,
+      undefined,
       directory
     );
     writeJson(join(fileUrl, "..", `${singleLang}.json`), translated);
