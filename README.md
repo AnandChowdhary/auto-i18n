@@ -6,7 +6,6 @@
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/AnandChowdhary/auto-i18n.svg)
 ![NPM type definitions](https://img.shields.io/npm/types/auto-i18n.svg)
 [![NPM](https://img.shields.io/npm/v/auto-i18n.svg)](https://www.npmjs.com/package/auto-i18n)
-[![Minzipped size](https://img.shields.io/bundlephobia/minzip/auto-i18n.svg)](https://www.npmjs.com/package/auto-i18n)
 
 [![NPM](https://nodei.co/npm/auto-i18n.png)](https://www.npmjs.com/package/auto-i18n)
 
