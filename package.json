@@ -20,10 +20,12 @@
     "test-without-coverage": "jest"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.0",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.3",
     "concurrently": "^4.1.0",
     "coveralls": "^3.0.3",
+    "dotenv": "^7.0.0",
     "jest": "^24.5.0",
     "onchange": "^5.2.0",
     "prettier": "^1.16.4",
@@ -46,5 +48,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "@google-cloud/translate": "^2.1.4"
   }
 }
