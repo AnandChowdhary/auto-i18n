@@ -2,7 +2,7 @@ import { translate, translateObject, translateFile } from "../index";
 import { join } from "path";
 
 // test("translate a word", async () => {
-//   const translated = await translate("hello", "fr");
+//   const translated = <string>await translate("hello", "fr");
 //   expect(translated.toLowerCase().trim()).toBe("bonjour");
 // });
 
@@ -37,8 +37,16 @@ import { join } from "path";
 //   expect(translated.hello.world[0].toLowerCase().trim()).toBe("bonjour");
 // });
 
-test("translating a file", async () => {
-  const filePath = join(__dirname, "example.json");
-  const translated = await translateFile(filePath, "fr");
-  expect(translated.fr).toBeDefined();
+// test("translating a file", async () => {
+//   const filePath = join(__dirname, "example.json");
+//   const translated = await translateFile(filePath, "fr");
+//   expect(translated.fr).toBeDefined();
+// });
+
+test("translation comes from cache", async () => {
+  const translated = <string>await translate("hello", "fr");
+  const translatedFromCache = <any>(
+    await translate("hello", "fr", undefined, true)
+  );
+  expect(translatedFromCache.from).toBe("cache");
 });

@@ -54,6 +54,7 @@
   "dependencies": {
     "@google-cloud/translate": "^2.1.4",
     "dot-object": "^1.7.1",
+    "fraud": "^5.0.0",
     "fs-extra": "^7.0.1"
   }
 }
