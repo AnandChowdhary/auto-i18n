@@ -2,6 +2,7 @@ import { config } from "dotenv";
 import { Translate } from "@google-cloud/translate";
 import { readJson, writeJson, mkdirp } from "fs-extra";
 import { dot, object } from "dot-object";
+import { join } from "path";
 import { languages } from "./languages";
 import Fraud from "fraud";
 
@@ -60,6 +61,30 @@ const translateObject = async (
   return dotted;
 };
 
+const translateFileSingle = async (
+  fileUrl: string,
+  lang: string[],
+  write: boolean = false,
+  from: string = "en",
+  directory?: string
+) => {
+  let contents = await readJson(fileUrl);
+  let isSingleFile = true;
+  Object.keys(contents).forEach(key => {
+    if (!languages.includes(key)) isSingleFile = false;
+  });
+  if (!isSingleFile) throw new Error("not single translation file");
+  for (let singleLang of lang) {
+    contents[singleLang] = await translateObject(
+      contents[from],
+      singleLang,
+      directory
+    );
+  }
+  if (write) await writeJson(fileUrl, contents);
+  return contents;
+};
+
 const translateFile = async (
   fileUrl: string,
   lang: string,
@@ -73,7 +98,13 @@ const translateFile = async (
     if (!languages.includes(key)) isSingleFile = false;
   });
   if (isSingleFile) {
-    contents[lang] = await translateObject(contents[from], lang, directory);
+    contents = await translateFileSingle(
+      fileUrl,
+      [lang],
+      write,
+      from,
+      directory
+    );
   } else {
     contents = await translateObject(contents, lang, directory);
   }
@@ -81,4 +112,28 @@ const translateFile = async (
   return contents;
 };
 
-export { translate, translateObject, translateFile };
+const generate = async (
+  fileUrl: string,
+  lang: string[],
+  from: string = "en",
+  directory?: string
+) => {
+  for (let singleLang of lang) {
+    const translated = await translateFile(
+      fileUrl,
+      singleLang,
+      false,
+      from,
+      directory
+    );
+    writeJson(join(fileUrl, "..", `${singleLang}.json`), translated);
+  }
+};
+
+export {
+  translate,
+  translateObject,
+  translateFile,
+  translateFileSingle,
+  generate
+};

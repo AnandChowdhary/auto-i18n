@@ -1,4 +1,10 @@
-import { translate, translateObject, translateFile } from "../index";
+import {
+  translate,
+  translateObject,
+  translateFile,
+  generate,
+  translateFileSingle
+} from "../index";
 import { readJson, writeJson, mkdirp } from "fs-extra";
 import { join } from "path";
 
@@ -80,12 +86,44 @@ test("translate a single file with many languages", async () => {
   expect(translated.fr.hello.toLowerCase().trim()).toBe("bonjour");
 });
 
+test("invalid single file would fail", async () => {
+  const dirPath = join(__dirname, "test-cache");
+  const filePath = join(dirPath, "test-3.json");
+  await mkdirp(dirPath);
+  await writeJson(filePath, { hello: "hello" });
+  translateFileSingle(filePath, ["fr"])
+    .then(() => {
+      throw new Error("did not fail");
+    })
+    .catch(error => expect(error.message).toBe("not single translation file"));
+});
+
+test("write single file with many languages", async () => {
+  const dirPath = join(__dirname, "test-cache");
+  const filePath = join(dirPath, "test-4.json");
+  await mkdirp(dirPath);
+  await writeJson(filePath, { en: { hello: "hello" } });
+  <any>await translateFileSingle(filePath, ["fr"], true);
+  const translated = await readJson(join(filePath, "..", "fr.json"));
+  expect(translated.hello.toLowerCase().trim()).toBe("bonjour");
+});
+
 test("save a translated file", async () => {
   const dirPath = join(__dirname, "test-cache");
-  const filePath = join(dirPath, "test-1.json");
+  const filePath = join(dirPath, "test-5.json");
   await mkdirp(dirPath);
   await writeJson(filePath, { hello: "hello" });
   <any>await translateFile(filePath, "fr", true);
-  const translated = await readJson(filePath);
+  const translated = await readJson(join(filePath, "..", "fr.json"));
   expect(translated.hello.toLowerCase().trim()).toBe("bonjour");
+});
+
+test("generate translations", async () => {
+  const dirPath = join(__dirname, "test-cache");
+  const filePath = join(dirPath, "en.json");
+  await mkdirp(dirPath);
+  await writeJson(filePath, { hello: "hello" });
+  <any>await generate(filePath, ["nl", "de"]);
+  const translated = await readJson(join(filePath, "..", "nl.json"));
+  expect(translated.hello.toLowerCase().trim()).toBeDefined();
 });
