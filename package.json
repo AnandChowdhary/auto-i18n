@@ -20,6 +20,7 @@
     "test-without-coverage": "jest"
   },
   "devDependencies": {
+    "@types/dot-object": "^1.7.0",
     "@types/dotenv": "^6.1.0",
     "@types/fs-extra": "^5.0.5",
     "@types/jest": "^24.0.11",
@@ -52,6 +53,7 @@
   },
   "dependencies": {
     "@google-cloud/translate": "^2.1.4",
+    "dot-object": "^1.7.1",
     "fs-extra": "^7.0.1"
   }
 }
