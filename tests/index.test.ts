@@ -46,12 +46,6 @@ test("translating a more complicated object", async () => {
   expect(translated.hello.world[0].toLowerCase().trim()).toBe("bonjour");
 });
 
-test("translating a file", async () => {
-  const filePath = join(__dirname, "example.json");
-  const translated = await translateFile(filePath, "fr");
-  expect(translated.fr).toBeDefined();
-});
-
 test("translation comes from cache", async () => {
   const translated = <string>await translate("hello", "fr");
   const translatedFromCache = <any>(
