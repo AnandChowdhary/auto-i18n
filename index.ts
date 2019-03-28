@@ -45,7 +45,7 @@ const translate = async (
       throw new Error("unable to translate from api");
     const word =
       (term.charAt(0) === term.charAt(0).toUpperCase()) ?
-        (translation.charAt(0).toUpperCase() + translation.slice(1)) :
+        (translation[0].charAt(0).toUpperCase() + translation[0].slice(1)) :
         translation[0];
     await fraud.create(cacheKey, word);
     return detailResult(word, "api");
