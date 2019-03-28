@@ -43,8 +43,12 @@ const translate = async (
     const translation = await googleTranslate.translate(term, lang);
     if (!translation.length || !translation[0])
       throw new Error("unable to translate from api");
-    await fraud.create(cacheKey, translation[0]);
-    return detailResult(translation[0], "api");
+    const word =
+      (term.charAt(0) === term.charAt(0).toUpperCase()) ?
+        (translation.charAt(0).toUpperCase() + translation.slice(1)) :
+        translation[0];
+    await fraud.create(cacheKey, word);
+    return detailResult(word, "api");
   }
 };
 
