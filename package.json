@@ -52,7 +52,7 @@
     ]
   },
   "dependencies": {
-    "@google-cloud/translate": "^3.0.1",
+    "@google-cloud/translate": "^4.0.0",
     "dot-object": "^1.7.1",
     "fraud": "^5.2.0",
     "fs-extra": "^7.0.1"
