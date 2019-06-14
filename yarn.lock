@@ -144,10 +144,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@google-cloud/common@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-1.0.0.tgz#1101fba362770b2db3e680dcfd5a34485a7098b8"
-  integrity sha512-+gnUT+GFB2OxMJzhu8OtCL+2g2e9kk7maFq/+Y8hS5cp2Y39cYN3diIUh0owiEs8V6CKxb/jn5zgqQUQ/4j2Rw==
+"@google-cloud/common@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-2.0.1.tgz#ba1363ceda020aa125991d5257d9163d7efcf86a"
+  integrity sha512-ZxIpo7C9LjdrM0G4FzvHd4WXs1bF7G+jRnVyDnBja6pfwJPuZE8qJ+1ftCor3AqFbN2I9Jk4vw4dkXWvSdxd0w==
   dependencies:
     "@google-cloud/projectify" "^1.0.0"
     "@google-cloud/promisify" "^1.0.0"
@@ -158,7 +158,7 @@
     extend "^3.0.2"
     google-auth-library "^4.0.0"
     retry-request "^4.0.0"
-    teeny-request "^3.11.3"
+    teeny-request "^4.0.0"
 
 "@google-cloud/projectify@^1.0.0":
   version "1.0.0"
@@ -170,21 +170,21 @@
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-1.0.0.tgz#1ae99ab8dd36807ee9923a81f8c6bc9159025fe9"
   integrity sha512-B1wYzEqvM71QQgzc47xH3np40dxT17G76gMYew0q/fSwU/iWu7nNfxOU8Ataormee5j/n27G1muKU85LRdecww==
 
-"@google-cloud/translate@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/translate/-/translate-4.0.1.tgz#2cb44e51139863cdc3d49242e1c43abc77009d23"
-  integrity sha512-7q936e7pKQ1C6jOTGudslEJGA00Qz1HQGOzhI+gydiVqg0OrVOkfSPk7MclAf3ssEFFKEcqHVMoTKyW5zcrEDA==
+"@google-cloud/translate@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/translate/-/translate-4.1.0.tgz#e5fd0ee18a87a7f7b47c6a29192b1c49fe8b16b8"
+  integrity sha512-LbzZiqNhb0wlMNkc3sYfKFaww55IJhLiEJL0N2wDCk4iGkCcrbMFqJbNTTARK/ipjjlPXI7Od+u+i3WmnfMOiQ==
   dependencies:
-    "@google-cloud/common" "^1.0.0"
+    "@google-cloud/common" "^2.0.0"
     "@google-cloud/promisify" "^1.0.0"
     arrify "^2.0.0"
     extend "^3.0.1"
     google-gax "^1.0.0"
     is "^3.2.1"
-    is-html "^1.1.0"
+    is-html "^2.0.0"
     lodash.merge "^4.6.1"
     protobufjs "^6.8.8"
-    teeny-request "^3.4.0"
+    teeny-request "^4.0.0"
 
 "@grpc/grpc-js@^0.4.0":
   version "0.4.0"
@@ -1844,10 +1844,10 @@ html-encoding-sniffer@^1.0.2:
   dependencies:
     whatwg-encoding "^1.0.1"
 
-html-tags@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-1.2.0.tgz#c78de65b5663aa597989dd2b7ab49200d7e4db98"
-  integrity sha1-x43mW1Zjqll5id0rerSSANfk25g=
+html-tags@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-3.0.0.tgz#41f57708c9e6b7b46a00a22317d614c4a2bab166"
+  integrity sha512-xiXEBjihaNI+VZ2mKEoI5ZPxqUsevTKM+aeeJ/W4KAg2deGE35minmCJMn51BvwJZmiHaeAxrb2LAS0yZJxuuA==
 
 http-signature@~1.2.0:
   version "1.2.0"
@@ -2044,12 +2044,12 @@ is-glob@^4.0.1:
   dependencies:
     is-extglob "^2.1.1"
 
-is-html@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-html/-/is-html-1.1.0.tgz#e04f1c18d39485111396f9a0273eab51af218464"
-  integrity sha1-4E8cGNOUhRETlvmgJz6rUa8hhGQ=
+is-html@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-html/-/is-html-2.0.0.tgz#b3ab2e27ccb7a12235448f51f115a6690f435fc8"
+  integrity sha512-S+OpgB5i7wzIue/YSE5hg0e5ZYfG3hhpNh9KGl6ayJ38p7ED6wxQLd1TV91xHpcTvw90KMJ9EwN3F/iNflHBVg==
   dependencies:
-    html-tags "^1.0.0"
+    html-tags "^3.0.0"
 
 is-number@^3.0.0:
   version "3.0.0"
@@ -4040,10 +4040,10 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-teeny-request@^3.11.3, teeny-request@^3.4.0:
-  version "3.11.3"
-  resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-3.11.3.tgz#335c629f7645e5d6599362df2f3230c4cbc23a55"
-  integrity sha512-CKncqSF7sH6p4rzCgkb/z/Pcos5efl0DmolzvlqRQUNcpRIruOhY9+T1FsIlyEbfWd7MsFpodROOwHYh2BaXzw==
+teeny-request@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-4.0.0.tgz#79a03c49334e720e89c79a5976042b4d1e18be8e"
+  integrity sha512-Kk87eePsBQZsn5rOIwupObYV7doBMedW3fUOmu3LFVRGEJQ7oeClwWkGFS3nkFs9TFL36qf08vGJd34swMorHQ==
   dependencies:
     https-proxy-agent "^2.2.1"
     node-fetch "^2.2.0"
