@@ -55,6 +55,6 @@
     "@google-cloud/translate": "^4.1.0",
     "dot-object": "^1.7.1",
     "fraud": "^5.2.0",
-    "fs-extra": "^8.0.1"
+    "fs-extra": "^8.1.0"
   }
 }
