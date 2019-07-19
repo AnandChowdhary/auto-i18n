@@ -1027,7 +1027,12 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.19.0, commander@~2.19.0:
+commander@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
+  integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
+
+commander@~2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
   integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
@@ -1249,13 +1254,13 @@ domexception@^1.0.1:
   dependencies:
     webidl-conversions "^4.0.2"
 
-dot-object@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/dot-object/-/dot-object-1.7.1.tgz#ec2bc9aeeb86bdeecf3d78235c1ee09bb93992e6"
-  integrity sha512-XJWGenQT/O9TOOip9JzY6Gtk73Cp8qnGnObeSvwdHA9h3YHXgma6qobPRHc8fxHugRpXiHWJ9XiWasXn+Dk2Kg==
+dot-object@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/dot-object/-/dot-object-1.8.1.tgz#6d2e3412bbf1a078ffc88bf0afb9900be078758b"
+  integrity sha512-Tk/EzgutsRgX1agdapqO8GTLMVFC2wg2X3xJB76W+rEIlTplQksedM/MzYS+FmkE8llJ6nMR60mhhw9aaGGHGA==
   dependencies:
-    commander "^2.19.0"
-    glob "^7.1.3"
+    commander "^2.20.0"
+    glob "^7.1.4"
 
 dotenv@^7.0.0:
   version "7.0.0"
@@ -1668,10 +1673,10 @@ glob-parent@^5.0.0:
   dependencies:
     is-glob "^4.0.1"
 
-glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
-  integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
+glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
+  integrity sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
