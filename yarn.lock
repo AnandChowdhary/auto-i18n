@@ -170,10 +170,10 @@
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-1.0.0.tgz#1ae99ab8dd36807ee9923a81f8c6bc9159025fe9"
   integrity sha512-B1wYzEqvM71QQgzc47xH3np40dxT17G76gMYew0q/fSwU/iWu7nNfxOU8Ataormee5j/n27G1muKU85LRdecww==
 
-"@google-cloud/translate@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/translate/-/translate-4.1.1.tgz#8e5e241030a4e63c7703fb9c9bc5ac8c93561006"
-  integrity sha512-AKRSs0RQfORyu/Sx0C4ALwT2hwoxpQJ0Jhy0UOuaKUbPL1gTWHL/lykyZaETZq21XrOQp8UzXMB8Icwbstkk9Q==
+"@google-cloud/translate@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@google-cloud/translate/-/translate-4.1.2.tgz#204031abd5e56d6251548fa1bb77f694f164e9b4"
+  integrity sha512-49Crl2zrJxy4TBVTmX+OddJ0GmqvNe/HUq3891EvGQWDIjBEhZtRhaDOBaF5TqRas47cxp8GTcIF4eFEosgpXQ==
   dependencies:
     "@google-cloud/common" "^2.0.0"
     "@google-cloud/promisify" "^1.0.0"
@@ -182,7 +182,6 @@
     google-gax "^1.0.0"
     is "^3.2.1"
     is-html "^2.0.0"
-    lodash.merge "^4.6.1"
     protobufjs "^6.8.8"
     teeny-request "^4.0.0"
 
@@ -2783,11 +2782,6 @@ lodash.has@^4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
   integrity sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
-
-lodash.merge@^4.6.1:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
-  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
