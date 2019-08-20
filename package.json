@@ -27,7 +27,7 @@
     "@types/node": "^12.7.2",
     "concurrently": "^4.1.1",
     "coveralls": "^3.0.6",
-    "dotenv": "^7.0.0",
+    "dotenv": "^8.1.0",
     "jest": "^24.9.0",
     "onchange": "^6.0.0",
     "prettier": "^1.18.2",
