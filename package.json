@@ -28,7 +28,7 @@
     "concurrently": "^5.1.0",
     "coveralls": "^3.0.11",
     "dotenv": "^8.2.0",
-    "jest": "^25.2.6",
+    "jest": "^25.2.7",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
     "ts-jest": "^25.3.0",
