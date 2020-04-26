@@ -24,7 +24,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/fs-extra": "^8.1.0",
     "@types/jest": "^25.1.5",
-    "@types/node": "^13.13.3",
+    "@types/node": "^13.13.4",
     "concurrently": "^5.2.0",
     "coveralls": "^3.1.0",
     "dotenv": "^8.2.0",
