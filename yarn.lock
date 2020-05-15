@@ -708,10 +708,10 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/dot-object@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/dot-object/-/dot-object-2.1.0.tgz#f55928db2baa10c80a0b14754c369e347b02c83d"
-  integrity sha512-XQtT1Ht68rbEYSlQja2lM0KVLtyItkqKX9GJ5EpYDaRhAcrVRI49JnLugv9EYyC/l11P90X31sj3VvxLBCvGpA==
+"@types/dot-object@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/dot-object/-/dot-object-2.1.1.tgz#b88d40c39f2f36d4db89d169d8235e91fc469ab5"
+  integrity sha512-GCQFfk9TYEUVgHZguc+4GKBiF6krlEXBAZPtPtCnmg2Fk0BNf09t4uWcoIRM6jgJgQT4QYZzLStpS26+Cit1hw==
 
 "@types/dotenv@^8.2.0":
   version "8.2.0"
