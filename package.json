@@ -33,7 +33,7 @@
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.2",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "jest": {
     "roots": [
