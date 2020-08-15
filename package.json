@@ -23,7 +23,7 @@
     "@types/dot-object": "^2.1.2",
     "@types/dotenv": "^8.2.0",
     "@types/fs-extra": "^9.0.1",
-    "@types/jest": "^26.0.9",
+    "@types/jest": "^26.0.10",
     "@types/node": "^14.0.27",
     "concurrently": "^5.3.0",
     "coveralls": "^3.1.0",
