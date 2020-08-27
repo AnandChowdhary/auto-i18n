@@ -30,7 +30,7 @@
     "dotenv": "^8.2.0",
     "jest": "^26.4.2",
     "onchange": "^7.0.2",
-    "prettier": "^2.1.0",
+    "prettier": "^2.1.1",
     "ts-jest": "^26.2.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.7"
