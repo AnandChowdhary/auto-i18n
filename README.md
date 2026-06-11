@@ -1,6 +1,6 @@
 # 🌐 Auto I18N
 
-[![Travis CI](https://img.shields.io/travis/AnandChowdhary/auto-i18n.svg)](https://travis-ci.org/AnandChowdhary/auto-i18n)
+[![Node CI](https://github.com/AnandChowdhary/auto-i18n/actions/workflows/ci.yml/badge.svg)](https://github.com/AnandChowdhary/auto-i18n/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/AnandChowdhary/auto-i18n/badge.svg?branch=master&v=2)](https://coveralls.io/github/AnandChowdhary/auto-i18n?branch=master)
 [![GitHub](https://img.shields.io/github/license/anandchowdhary/auto-i18n.svg)](https://github.com/AnandChowdhary/auto-i18n/blob/master/LICENSE)
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/AnandChowdhary/auto-i18n.svg)
