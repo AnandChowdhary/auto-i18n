@@ -129,7 +129,7 @@ const generate = async (
       undefined,
       directory
     );
-    writeJson(join(fileUrl, "..", `${singleLang}.json`), translated);
+    await writeJson(join(fileUrl, "..", `${singleLang}.json`), translated);
   }
 };
 
