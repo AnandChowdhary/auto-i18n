@@ -19,10 +19,10 @@ Add the dependency from NPM:
 npm install auto-i18n
 ```
 
-Import the modules you require from the package:
+Import the functions you need from the package (for example, `translate`):
 
 ```js
-import * from "auto-i18n";
+import { translate } from "auto-i18n";
 ```
 
 And then configure your Project ID and API key as environment variables (see [Configuration](#configuration)).
